@@ -10,10 +10,14 @@ public class MyButton {
         this.listener = listener;
     }
 
+
     /**
      * The button is clicked
      */
     public void doClick() {
-        listener.onClick();
+        if (listener != null) {
+            listener.onClick("haha");
+        }
+
     }
 }
